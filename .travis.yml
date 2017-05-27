@@ -2,12 +2,14 @@ language: node_js
 node_js:
   - "6.9"
 
+before_install:
+ - cd ancestry-web
+
 install:
   - npm install -g @angular/cli
   - npm install
 
 script:
-  - cd ancestry-web
   - ng build
 
 deploy:
