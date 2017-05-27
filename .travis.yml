@@ -19,3 +19,4 @@ deploy:
   bucket: "gebhart-ancestry.com"
   skip_cleanup: true 
   local_dir: dist
+  acl: public_read
