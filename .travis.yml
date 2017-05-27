@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "6.9"
+
+install:
+  - npm install -g @angular/cli
+  - npm install
+
+script:
+  - cd ancestry-web
+  - ng build
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_ACCESS_KEY_SECRET
+  bucket: "gebhart-ancestry.com"
+  skip_cleanup: true 
+  local_dir: dist
